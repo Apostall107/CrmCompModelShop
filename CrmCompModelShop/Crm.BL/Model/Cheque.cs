@@ -14,19 +14,20 @@ namespace Crm.BL.Model
         
         public int CustomerId { get; set; }
         
-        public virtual Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }  
+        public int SellerId { get; set; }
         
-        public string Name { get; set; }
+        public virtual Seller Seller { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public virtual ICollection<Transaction> Transactions { get; set; }
+
 
         public override string ToString()
         {
-            // checks...
-
-            return Name;
+            return $"№ {Id}. date: {Created.ToString("dd.mm.yyyy hh:mm:ss")} "; 
         }
-
-
-
 
 
     }
