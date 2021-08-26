@@ -26,7 +26,7 @@ namespace Crm.BL.Model
 
         public override string ToString()
         {
-            return $"№ {Id}. date: {Created.ToString("dd.mm.yyyy hh:mm:ss")} "; 
+            return $"№ {Id}. date: {Created:dd.mm.yyyy hh:mm:ss} "; 
         }
 
 

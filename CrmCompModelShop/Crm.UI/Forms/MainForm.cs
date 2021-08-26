@@ -13,11 +13,11 @@ namespace Crm.UI.Forms
 {
     public partial class MainForm : Form
     {
-        readonly CrmContext crmContext;
+         CrmContext db;
         public MainForm()
         {
             InitializeComponent();
-            crmContext = new CrmContext();
+            db = new CrmContext();
         }
 
 
@@ -28,7 +28,7 @@ namespace Crm.UI.Forms
 
         private void Seller_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Catalogue<Seller> catalogueSeller = new Catalogue<Seller>(crmContext.Sellers);
+            Catalogue<Seller> catalogueSeller = new Catalogue<Seller>(db.Sellers, db);
             catalogueSeller.Show();
         }
 
@@ -40,11 +40,12 @@ namespace Crm.UI.Forms
             if (sellerForm.ShowDialog() == DialogResult.OK)
             {
 
-                crmContext.Sellers.Add(sellerForm.Seller);
-                crmContext.SaveChanges();
+                db.Sellers.Add(sellerForm.Seller);
+                db.SaveChanges();
 
 
             }
+
 
         }
         #endregion
@@ -53,7 +54,7 @@ namespace Crm.UI.Forms
 
         private void Customer_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Catalogue<Customer> catalogueCustomer = new Catalogue<Customer>(crmContext.Customers);
+            Catalogue<Customer> catalogueCustomer = new Catalogue<Customer>(db.Customers, db);
             catalogueCustomer.Show();
         }
 
@@ -66,8 +67,8 @@ namespace Crm.UI.Forms
             if (customerForm.ShowDialog() == DialogResult.OK)
             {
 
-                crmContext.Customers.Add(customerForm.Customer);
-                crmContext.SaveChanges();
+                db.Customers.Add(customerForm.Customer);
+                db.SaveChanges();
 
 
             }
@@ -82,7 +83,7 @@ namespace Crm.UI.Forms
 
         private void Product_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Catalogue<Product> catalogueProduct = new Catalogue<Product>(crmContext.Products);
+            Catalogue<Product> catalogueProduct = new Catalogue<Product>(db.Products, db);
             catalogueProduct.Show();
         }
         private void ProductAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,8 +94,8 @@ namespace Crm.UI.Forms
             if (productForm.ShowDialog() == DialogResult.OK)
             {
 
-                crmContext.Products.Add(productForm.Product);
-                crmContext.SaveChanges();
+                db.Products.Add(productForm.Product);
+                db.SaveChanges();
 
 
             }
@@ -111,7 +112,7 @@ namespace Crm.UI.Forms
 
         private void Cheque_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Catalogue<Cheque> catalogueCheque = new Catalogue<Cheque>(crmContext.Cheques);
+            Catalogue<Cheque> catalogueCheque = new Catalogue<Cheque>(db.Cheques, db);
             catalogueCheque.Show();
 
         }
@@ -119,17 +120,7 @@ namespace Crm.UI.Forms
 
 
 
-
-
-
-
-
-
-
         #endregion
-
-
-
 
 
 

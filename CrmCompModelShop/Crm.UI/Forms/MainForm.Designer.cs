@@ -101,6 +101,7 @@ namespace Crm.UI.Forms
             this.product_ToolStripMenuItem.Name = "product_ToolStripMenuItem";
             this.product_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.product_ToolStripMenuItem.Text = "Product";
+            this.product_ToolStripMenuItem.Click += new System.EventHandler(this.Product_ToolStripMenuItem_Click);
             // 
             // productAdd_ToolStripMenuItem
             // 
@@ -120,6 +121,7 @@ namespace Crm.UI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

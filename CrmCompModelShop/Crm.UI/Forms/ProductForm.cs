@@ -22,6 +22,13 @@ namespace Crm.UI.Forms
             InitializeComponent();
         }
 
+        public ProductForm(Product product) : this()
+        {
+            Product = product ?? new Product();
+            name_TextBox.Text = Product.Name;
+            price_NumericUpDown.Value = Product.Price;
+            quantity_NumericUpDown.Value = Product.Quantity;
+        }
         private void Add_Button_Click(object sender, EventArgs e)
         {
 

@@ -61,6 +61,7 @@ namespace Crm.UI.Forms
             // add_Button
             // 
             this.add_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.add_Button.Location = new System.Drawing.Point(321, 395);
             this.add_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.add_Button.Name = "add_Button";

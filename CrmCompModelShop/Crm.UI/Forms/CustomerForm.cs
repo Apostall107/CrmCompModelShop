@@ -22,6 +22,12 @@ namespace Crm.UI.Forms
             InitializeComponent();
         }
 
+        public CustomerForm(Customer customer) : this()
+        {
+            Customer = customer ?? new Customer();
+            name_TextBox.Text = Customer.Name;
+        }
+
         private void Add_Button_Click(object sender, EventArgs e)
         {
 
