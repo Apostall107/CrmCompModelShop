@@ -32,10 +32,13 @@ namespace Crm.UI.Forms
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.entityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seller_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellerShow_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellerAdd_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customer_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerShow_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerAdd_ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.product_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productShow_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productAdd_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheque_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -65,43 +68,67 @@ namespace Crm.UI.Forms
             // seller_ToolStripMenuItem
             // 
             this.seller_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sellerShow_ToolStripMenuItem,
             this.sellerAdd_ToolStripMenuItem});
             this.seller_ToolStripMenuItem.Name = "seller_ToolStripMenuItem";
             this.seller_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.seller_ToolStripMenuItem.Text = "Seller";
             this.seller_ToolStripMenuItem.Click += new System.EventHandler(this.Seller_ToolStripMenuItem_Click);
             // 
+            // sellerShow_ToolStripMenuItem
+            // 
+            this.sellerShow_ToolStripMenuItem.Name = "sellerShow_ToolStripMenuItem";
+            this.sellerShow_ToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.sellerShow_ToolStripMenuItem.Text = "Show";
+            this.sellerShow_ToolStripMenuItem.Click += new System.EventHandler(this.SellerShow_ToolStripMenuItem_Click);
+            // 
             // sellerAdd_ToolStripMenuItem
             // 
             this.sellerAdd_ToolStripMenuItem.Name = "sellerAdd_ToolStripMenuItem";
-            this.sellerAdd_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sellerAdd_ToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.sellerAdd_ToolStripMenuItem.Text = "Add";
             this.sellerAdd_ToolStripMenuItem.Click += new System.EventHandler(this.SellerAdd_ToolStripMenuItem_Click);
             // 
             // customer_ToolStripMenuItem
             // 
             this.customer_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerShow_ToolStripMenuItem,
             this.customerAdd_ToolStripMenuItem1});
             this.customer_ToolStripMenuItem.Name = "customer_ToolStripMenuItem";
             this.customer_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.customer_ToolStripMenuItem.Text = "Customer";
             this.customer_ToolStripMenuItem.Click += new System.EventHandler(this.Customer_ToolStripMenuItem_Click);
             // 
+            // customerShow_ToolStripMenuItem
+            // 
+            this.customerShow_ToolStripMenuItem.Name = "customerShow_ToolStripMenuItem";
+            this.customerShow_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerShow_ToolStripMenuItem.Text = "Show";
+            this.customerShow_ToolStripMenuItem.Click += new System.EventHandler(this.CustomerShow_ToolStripMenuItem_Click);
+            // 
             // customerAdd_ToolStripMenuItem1
             // 
             this.customerAdd_ToolStripMenuItem1.Name = "customerAdd_ToolStripMenuItem1";
-            this.customerAdd_ToolStripMenuItem1.Size = new System.Drawing.Size(96, 22);
+            this.customerAdd_ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.customerAdd_ToolStripMenuItem1.Text = "Add";
             this.customerAdd_ToolStripMenuItem1.Click += new System.EventHandler(this.CustomerAdd_ToolStripMenuItem_Click);
             // 
             // product_ToolStripMenuItem
             // 
             this.product_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productShow_ToolStripMenuItem,
             this.productAdd_ToolStripMenuItem});
             this.product_ToolStripMenuItem.Name = "product_ToolStripMenuItem";
             this.product_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.product_ToolStripMenuItem.Text = "Product";
             this.product_ToolStripMenuItem.Click += new System.EventHandler(this.Product_ToolStripMenuItem_Click);
+            // 
+            // productShow_ToolStripMenuItem
+            // 
+            this.productShow_ToolStripMenuItem.Name = "productShow_ToolStripMenuItem";
+            this.productShow_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productShow_ToolStripMenuItem.Text = "Show";
+            this.productShow_ToolStripMenuItem.Click += new System.EventHandler(this.productShow_ToolStripMenuItem_Click);
             // 
             // productAdd_ToolStripMenuItem
             // 
@@ -145,6 +172,9 @@ namespace Crm.UI.Forms
         private System.Windows.Forms.ToolStripMenuItem sellerAdd_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerAdd_ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem productAdd_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellerShow_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerShow_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productShow_ToolStripMenuItem;
     }
 }
 

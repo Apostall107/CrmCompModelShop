@@ -32,6 +32,13 @@ namespace Crm.UI.Forms
             catalogueSeller.Show();
         }
 
+
+        private void SellerShow_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Seller_ToolStripMenuItem_Click(sender, e);
+        }
+
+
         private void SellerAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -58,6 +65,10 @@ namespace Crm.UI.Forms
             catalogueCustomer.Show();
         }
 
+        private void CustomerShow_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_ToolStripMenuItem_Click(sender, e);
+        }
 
         private void CustomerAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -85,6 +96,10 @@ namespace Crm.UI.Forms
         {
             Catalogue<Product> catalogueProduct = new Catalogue<Product>(db.Products, db);
             catalogueProduct.Show();
+        }
+        private void productShow_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Product_ToolStripMenuItem_Click(sender, e);
         }
         private void ProductAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -120,9 +135,11 @@ namespace Crm.UI.Forms
 
 
 
+
+
+
+
         #endregion
-
-
 
 
 
