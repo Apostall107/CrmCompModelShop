@@ -76,6 +76,7 @@ namespace Crm.UI.Forms
             this.sellerAdd_ToolStripMenuItem.Name = "sellerAdd_ToolStripMenuItem";
             this.sellerAdd_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sellerAdd_ToolStripMenuItem.Text = "Add";
+            this.sellerAdd_ToolStripMenuItem.Click += new System.EventHandler(this.SellerAdd_ToolStripMenuItem_Click);
             // 
             // customer_ToolStripMenuItem
             // 
@@ -104,7 +105,7 @@ namespace Crm.UI.Forms
             // productAdd_ToolStripMenuItem
             // 
             this.productAdd_ToolStripMenuItem.Name = "productAdd_ToolStripMenuItem";
-            this.productAdd_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productAdd_ToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.productAdd_ToolStripMenuItem.Text = "Add";
             // 
             // cheque_ToolStripMenuItem

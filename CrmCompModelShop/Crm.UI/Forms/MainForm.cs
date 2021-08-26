@@ -63,5 +63,21 @@ namespace Crm.UI.Forms
 
 
         }
+
+        private void SellerAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            SellerForm sellerForm = new SellerForm();
+
+            if (sellerForm.ShowDialog() == DialogResult.OK)
+            {
+
+                crmContext.Customers.Add(sellerForm.Customer);
+                crmContext.SaveChanges();
+
+
+            }
+
+        }
     }
 }
