@@ -18,10 +18,24 @@ namespace Crm.BL.Model
 
         public override string ToString()
         {
-            // some checks
+            //some checks...
 
-            return Name;
+            return $"{Name} - {Price}";
         }
 
+        public override int GetHashCode()
+        {
+            return this.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Product product)
+            {
+                return this.Id.Equals(product.Id);
+            }
+
+            return false;
+        }
     }
 }
