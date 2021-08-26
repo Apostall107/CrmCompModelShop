@@ -14,7 +14,7 @@ namespace Crm.UI.Forms
     public partial class SellerForm : Form
     {
 
-        public Customer Customer { get; set; }
+        public Seller Seller { get; set; }
 
 
         public SellerForm()
@@ -25,7 +25,7 @@ namespace Crm.UI.Forms
         private void Add_Button_Click(object sender, EventArgs e)
         {
 
-            Customer = new Customer()
+            Seller = new Seller()
             {
                 Name = name_TextBox.Text
             };

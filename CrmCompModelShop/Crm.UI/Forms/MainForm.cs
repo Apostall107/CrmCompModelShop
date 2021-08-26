@@ -72,7 +72,7 @@ namespace Crm.UI.Forms
             if (sellerForm.ShowDialog() == DialogResult.OK)
             {
 
-                crmContext.Customers.Add(sellerForm.Customer);
+                crmContext.Sellers.Add(sellerForm.Seller);
                 crmContext.SaveChanges();
 
 
