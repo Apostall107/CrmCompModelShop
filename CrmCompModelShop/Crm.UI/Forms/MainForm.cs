@@ -79,5 +79,21 @@ namespace Crm.UI.Forms
             }
 
         }
+
+        private void ProductAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ProductForm productForm = new ProductForm();
+
+            if (productForm.ShowDialog() == DialogResult.OK)
+            {
+
+                crmContext.Products.Add(productForm.Product);
+                crmContext.SaveChanges();
+
+
+            }
+
+        }
     }
 }
