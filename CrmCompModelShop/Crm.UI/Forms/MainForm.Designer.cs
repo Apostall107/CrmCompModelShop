@@ -31,13 +31,13 @@ namespace Crm.UI.Forms
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.entityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellerAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerAddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.productAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seller_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellerAdd_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customer_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerAdd_ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.product_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productAdd_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cheque_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,65 +54,65 @@ namespace Crm.UI.Forms
             // entityToolStripMenuItem
             // 
             this.entityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sellerToolStripMenuItem,
-            this.customerToolStripMenuItem,
-            this.productToolStripMenuItem,
-            this.chequeToolStripMenuItem});
+            this.seller_ToolStripMenuItem,
+            this.customer_ToolStripMenuItem,
+            this.product_ToolStripMenuItem,
+            this.cheque_ToolStripMenuItem});
             this.entityToolStripMenuItem.Name = "entityToolStripMenuItem";
             this.entityToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.entityToolStripMenuItem.Text = "Entity";
             // 
-            // sellerToolStripMenuItem
+            // seller_ToolStripMenuItem
             // 
-            this.sellerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sellerAddToolStripMenuItem});
-            this.sellerToolStripMenuItem.Name = "sellerToolStripMenuItem";
-            this.sellerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sellerToolStripMenuItem.Text = "Seller";
-            this.sellerToolStripMenuItem.Click += new System.EventHandler(this.sellerToolStripMenuItem_Click);
+            this.seller_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sellerAdd_ToolStripMenuItem});
+            this.seller_ToolStripMenuItem.Name = "seller_ToolStripMenuItem";
+            this.seller_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seller_ToolStripMenuItem.Text = "Seller";
+            this.seller_ToolStripMenuItem.Click += new System.EventHandler(this.Seller_ToolStripMenuItem_Click);
             // 
-            // customerToolStripMenuItem
+            // sellerAdd_ToolStripMenuItem
             // 
-            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerAddToolStripMenuItem1});
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.customerToolStripMenuItem.Text = "Customer";
-            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
+            this.sellerAdd_ToolStripMenuItem.Name = "sellerAdd_ToolStripMenuItem";
+            this.sellerAdd_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sellerAdd_ToolStripMenuItem.Text = "Add";
             // 
-            // productToolStripMenuItem
+            // customer_ToolStripMenuItem
             // 
-            this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productAddToolStripMenuItem});
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productToolStripMenuItem.Text = "Product";
-            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.customer_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerAdd_ToolStripMenuItem1});
+            this.customer_ToolStripMenuItem.Name = "customer_ToolStripMenuItem";
+            this.customer_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customer_ToolStripMenuItem.Text = "Customer";
+            this.customer_ToolStripMenuItem.Click += new System.EventHandler(this.Customer_ToolStripMenuItem_Click);
             // 
-            // chequeToolStripMenuItem
+            // customerAdd_ToolStripMenuItem1
             // 
-            this.chequeToolStripMenuItem.Name = "chequeToolStripMenuItem";
-            this.chequeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.chequeToolStripMenuItem.Text = "Cheque";
-            this.chequeToolStripMenuItem.Click += new System.EventHandler(this.chequeToolStripMenuItem_Click);
+            this.customerAdd_ToolStripMenuItem1.Name = "customerAdd_ToolStripMenuItem1";
+            this.customerAdd_ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.customerAdd_ToolStripMenuItem1.Text = "Add";
+            this.customerAdd_ToolStripMenuItem1.Click += new System.EventHandler(this.CustomerAdd_ToolStripMenuItem_Click);
             // 
-            // sellerAddToolStripMenuItem
+            // product_ToolStripMenuItem
             // 
-            this.sellerAddToolStripMenuItem.Name = "sellerAddToolStripMenuItem";
-            this.sellerAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sellerAddToolStripMenuItem.Text = "Add";
+            this.product_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productAdd_ToolStripMenuItem});
+            this.product_ToolStripMenuItem.Name = "product_ToolStripMenuItem";
+            this.product_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.product_ToolStripMenuItem.Text = "Product";
             // 
-            // customerAddToolStripMenuItem1
+            // productAdd_ToolStripMenuItem
             // 
-            this.customerAddToolStripMenuItem1.Name = "customerAddToolStripMenuItem1";
-            this.customerAddToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.customerAddToolStripMenuItem1.Text = "Add";
+            this.productAdd_ToolStripMenuItem.Name = "productAdd_ToolStripMenuItem";
+            this.productAdd_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productAdd_ToolStripMenuItem.Text = "Add";
             // 
-            // productAddToolStripMenuItem
+            // cheque_ToolStripMenuItem
             // 
-            this.productAddToolStripMenuItem.Name = "productAddToolStripMenuItem";
-            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productAddToolStripMenuItem.Text = "Add";
+            this.cheque_ToolStripMenuItem.Name = "cheque_ToolStripMenuItem";
+            this.cheque_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cheque_ToolStripMenuItem.Text = "Cheque";
+            this.cheque_ToolStripMenuItem.Click += new System.EventHandler(this.Cheque_ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -134,13 +134,13 @@ namespace Crm.UI.Forms
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem entityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sellerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chequeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sellerAddToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerAddToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem productAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seller_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customer_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem product_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cheque_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellerAdd_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerAdd_ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem productAdd_ToolStripMenuItem;
     }
 }
 

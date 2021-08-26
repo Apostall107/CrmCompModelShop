@@ -13,32 +13,32 @@ namespace Crm.UI.Forms
 {
     public partial class MainForm : Form
     {
-        CrmContext crmContext;
+        readonly CrmContext crmContext;
         public MainForm()
         {
             InitializeComponent();
             crmContext = new CrmContext();
         }
 
-        private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Seller_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Catalogue<Seller> catalogueSeller = new Catalogue<Seller>(crmContext.Sellers);
             catalogueSeller.Show();
         }
 
-        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Customer_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Catalogue<Customer> catalogueCustomer = new Catalogue<Customer>(crmContext.Customers);
             catalogueCustomer.Show();
         }
 
-        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Product_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Catalogue<Product> catalogueProduct = new Catalogue<Product>(crmContext.Products);
             catalogueProduct.Show();
         }
 
-        private void chequeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Cheque_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Catalogue<Cheque> catalogueCheque = new Catalogue<Cheque>(crmContext.Cheques);
             catalogueCheque.Show();
@@ -46,5 +46,22 @@ namespace Crm.UI.Forms
         }
 
 
+
+        private void CustomerAdd_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            CustomerForm customerForm = new CustomerForm();
+
+            if (customerForm.ShowDialog() == DialogResult.OK)
+            {
+
+                crmContext.Customers.Add(customerForm.Customer);
+                crmContext.SaveChanges();
+
+
+            }
+
+
+        }
     }
 }
