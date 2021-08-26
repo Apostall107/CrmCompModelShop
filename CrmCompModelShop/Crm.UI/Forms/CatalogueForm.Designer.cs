@@ -1,5 +1,5 @@
 ﻿
-namespace Crm.UI
+namespace Crm.UI.Forms
 {
     partial class Catalogue<T>
     {

@@ -1,7 +1,7 @@
 ﻿
-namespace Crm.UI
+namespace Crm.UI.Forms
 {
-    partial class Main
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,9 @@ namespace Crm.UI
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellerAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerAddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +64,8 @@ namespace Crm.UI
             // 
             // sellerToolStripMenuItem
             // 
+            this.sellerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sellerAddToolStripMenuItem});
             this.sellerToolStripMenuItem.Name = "sellerToolStripMenuItem";
             this.sellerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sellerToolStripMenuItem.Text = "Seller";
@@ -68,6 +73,8 @@ namespace Crm.UI
             // 
             // customerToolStripMenuItem
             // 
+            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerAddToolStripMenuItem1});
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.customerToolStripMenuItem.Text = "Customer";
@@ -75,6 +82,8 @@ namespace Crm.UI
             // 
             // productToolStripMenuItem
             // 
+            this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productAddToolStripMenuItem});
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productToolStripMenuItem.Text = "Product";
@@ -87,14 +96,32 @@ namespace Crm.UI
             this.chequeToolStripMenuItem.Text = "Cheque";
             this.chequeToolStripMenuItem.Click += new System.EventHandler(this.chequeToolStripMenuItem_Click);
             // 
-            // Main
+            // sellerAddToolStripMenuItem
+            // 
+            this.sellerAddToolStripMenuItem.Name = "sellerAddToolStripMenuItem";
+            this.sellerAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sellerAddToolStripMenuItem.Text = "Add";
+            // 
+            // customerAddToolStripMenuItem1
+            // 
+            this.customerAddToolStripMenuItem1.Name = "customerAddToolStripMenuItem1";
+            this.customerAddToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.customerAddToolStripMenuItem1.Text = "Add";
+            // 
+            // productAddToolStripMenuItem
+            // 
+            this.productAddToolStripMenuItem.Name = "productAddToolStripMenuItem";
+            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productAddToolStripMenuItem.Text = "Add";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Main";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -111,6 +138,9 @@ namespace Crm.UI
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chequeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellerAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerAddToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem productAddToolStripMenuItem;
     }
 }
 

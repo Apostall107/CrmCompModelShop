@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Crm.UI
+namespace Crm.UI.Forms
 {
     public partial class Catalogue<T> : Form 
         where T : class

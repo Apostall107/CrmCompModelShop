@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Crm.UI.Properties
+namespace Crm.UI.Forms.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.

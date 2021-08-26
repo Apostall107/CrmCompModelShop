@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Crm.UI
+namespace Crm.UI.Forms
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
         CrmContext crmContext;
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
             crmContext = new CrmContext();
