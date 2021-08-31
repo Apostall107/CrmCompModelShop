@@ -12,7 +12,7 @@ namespace Crm.BL.Model
 
         public CrmContext() : base("ConnectionStringCrmShopTest") { }
 
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Selling> Sellings { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Cheque> Cheques { get; set; }

@@ -53,13 +53,14 @@
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AbstractPerson.cs" />
+    <Compile Include="Model\CashDesk.cs" />
     <Compile Include="Model\Cheque.cs" />
     <Compile Include="Model\CrmContext.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Seller.cs" />
     <Compile Include="Model\ShoppingCart.cs" />
-    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Selling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

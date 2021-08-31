@@ -21,7 +21,7 @@ namespace Crm.BL.Model
 
         public DateTime Created { get; set; }
 
-        public virtual ICollection<Transaction> Transactions { get; set; }
+        public virtual ICollection<Selling> Sellings { get; set; }
 
 
         public override string ToString()

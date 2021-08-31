@@ -14,7 +14,7 @@ namespace Crm.BL.Model
         public decimal Price { get; set; }
         public int Quantity { get; set; }
 
-        public virtual ICollection<Transaction> Transactions { get; set; }
+        public virtual ICollection<Selling> Sellings { get; set; }
 
         public override string ToString()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Crm.BL.Model
 {
-    public class Transaction
+    public class Selling
     {
 
         public int Id { get; set; }
