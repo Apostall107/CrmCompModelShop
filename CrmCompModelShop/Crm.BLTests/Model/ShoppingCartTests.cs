@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Crm.BL.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Crm.BL.Model.Tests
 {
@@ -38,7 +33,7 @@ namespace Crm.BL.Model.Tests
 
             List<Product> expectedResult = new List<Product>()
             {
-                product1, 
+                product1,
                 product1,
                 product1,
                 product1,
@@ -59,25 +54,16 @@ namespace Crm.BL.Model.Tests
             cart.Add(product2);
             cart.Add(product2);
 
-
             List<Product> actualResult = cart.GetAll();
-
 
             // asserts
 
             Assert.AreEqual(expectedResult.Count, actualResult.Count);
 
-
             for (int i = 0; i < expectedResult.Count; i++)
             {
                 Assert.AreEqual(expectedResult[i], actualResult[i]);
             }
-
-
-
-
         }
-
-
     }
 }
