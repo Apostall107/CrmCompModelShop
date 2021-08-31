@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Crm.BL.Model
 {
     public class ShoppingCart : IEnumerable
     {
-
         public Customer Customer { get; set; }
         public Dictionary<Product, int> Products { get; set; }
         public decimal Price => GetAll().Sum(p => p.Price);
@@ -52,6 +48,5 @@ namespace Crm.BL.Model
             }
             return result;
         }
-
     }
 }

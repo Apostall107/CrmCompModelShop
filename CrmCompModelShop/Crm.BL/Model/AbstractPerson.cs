@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Crm.BL.Model
 {
@@ -12,12 +8,12 @@ namespace Crm.BL.Model
         public string Name { get; set; }
 
         public virtual ICollection<Cheque> Cheques { get; set; }
+
         public override string ToString()
         {
             // checks...
 
             return Name;
         }
-
     }
 }

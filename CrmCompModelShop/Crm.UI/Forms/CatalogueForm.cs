@@ -1,13 +1,6 @@
 ﻿using Crm.BL.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Crm.UI.Forms
@@ -15,8 +8,8 @@ namespace Crm.UI.Forms
     public partial class Catalogue<T> : Form
         where T : class
     {
-        CrmContext db;
-        DbSet<T> dbSet;
+        private CrmContext db;
+        private DbSet<T> dbSet;
 
         public Catalogue(DbSet<T> dbSet, CrmContext db)
         {
@@ -27,15 +20,12 @@ namespace Crm.UI.Forms
             dataGridView.DataSource = dbSet.Local.ToBindingList();
         }
 
-
         private void Catalogue_Load(object sender, EventArgs e)
         {
-
         }
 
         private void ChangeSelected_Button_Click(object sender, EventArgs e)
         {
-
             object id = dataGridView.SelectedRows[0].Cells[0].Value;
 
             if (typeof(T) == typeof(Product))
