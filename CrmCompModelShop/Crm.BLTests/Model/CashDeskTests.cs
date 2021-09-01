@@ -32,14 +32,14 @@ namespace Crm.BL.Model.Tests
                 Id = 1,
                 Name = "product1",
                 Price = 100,
-                Quantity = 11
+                QuantityAvaliable = 11
             };
             Product product2 = new Product()
             {
                 Id = 2,
                 Name = "product2",
                 Price = 200,
-                Quantity = 22
+                QuantityAvaliable = 22
             };
 
             ShoppingCart cart1 = new ShoppingCart(customer1);
@@ -69,8 +69,8 @@ namespace Crm.BL.Model.Tests
 
             Assert.AreEqual(cart1ExpectedResult, cart1ActualResult);
             Assert.AreEqual(cart2ExpectedResult, cart2ActualResult);
-            Assert.AreEqual(8, product1.Quantity);
-            Assert.AreEqual(19, product2.Quantity);
+            Assert.AreEqual(8, product1.QuantityAvaliable);
+            Assert.AreEqual(19, product2.QuantityAvaliable);
         }
     }
 }

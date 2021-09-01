@@ -20,14 +20,14 @@ namespace Crm.BL.Model.Tests
                 Id = 1,
                 Name = "product1",
                 Price = 123,
-                Quantity = 11
+                QuantityAvaliable = 11
             };
             Product product2 = new Product()
             {
                 Id = 2,
                 Name = "product2",
                 Price = 456,
-                Quantity = 22
+                QuantityAvaliable = 22
             };
             ShoppingCart cart = new ShoppingCart(customer);
 

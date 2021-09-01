@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//TODO: 
+//TODO:
 namespace Crm.BL.Model
 {
     public class CashDesk
@@ -18,14 +18,14 @@ namespace Crm.BL.Model
 
         public int CustomersLeftCounter { get; set; }
 
-        public bool IsNotModel { get; set; }
+        public bool IsModel { get; set; }
 
         public CashDesk(int deskNo, Seller seller)
         {
             DeskNo = deskNo;
             Seller = seller;
             Queue = new Queue<ShoppingCart>();
-            IsNotModel = false;
+            IsModel = true;
         }
 
         public void Enqueue(ShoppingCart cart)
@@ -42,7 +42,7 @@ namespace Crm.BL.Model
 
         public decimal Dequeue()
         {
-            decimal  sum = 0m;
+            decimal sum = 0m;
             if (Queue.Count == 0)
             {
                 return 0;
@@ -61,7 +61,7 @@ namespace Crm.BL.Model
                     Created = DateTime.Now
                 };
 
-                if (IsNotModel)
+                if (IsModel != true)
                 {
                     db.Cheques.Add(cheque);
                     db.SaveChanges();
@@ -71,12 +71,11 @@ namespace Crm.BL.Model
                     cheque.Id = 0;
                 }
 
-
                 List<Selling> sellings = new List<Selling>();
 
                 foreach (Product product in cart)
                 {
-                    if (product.Quantity > 0)
+                    if (product.QuantityAvaliable > 0)
                     {
                         Selling selling = new Selling()
                         {
@@ -88,26 +87,27 @@ namespace Crm.BL.Model
 
                         sellings.Add(selling);
 
-                        if (IsNotModel)
+                        if (IsModel != true)
                         {
                             db.Sellings.Add(selling);
                         }
-                        product.Quantity--;
+                        product.QuantityAvaliable--;
                         sum += product.Price;
                     }
                 }
 
-                if (IsNotModel)
+                if (IsModel != true)
                 {
                     db.SaveChanges();
                 }
-
             }
 
             return sum;
         }
 
-
-
+        public override string ToString()
+        {
+            return $"Cash desk №{DeskNo}";
+        }
     }
 }

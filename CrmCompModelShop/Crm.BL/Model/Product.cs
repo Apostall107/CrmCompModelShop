@@ -7,7 +7,7 @@ namespace Crm.BL.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public int Quantity { get; set; }
+        public int QuantityAvaliable { get; set; }
 
         public virtual ICollection<Selling> Sellings { get; set; }
 

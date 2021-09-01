@@ -18,7 +18,7 @@ namespace Crm.UI.Forms
             Product = product ?? new Product();
             name_TextBox.Text = Product.Name;
             price_NumericUpDown.Value = Product.Price;
-            quantity_NumericUpDown.Value = Product.Quantity;
+            quantity_NumericUpDown.Value = Product.QuantityAvaliable;
         }
 
         private void Add_Button_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace Crm.UI.Forms
             {
                 Name = name_TextBox.Text,
                 Price = price_NumericUpDown.Value,
-                Quantity = (int)quantity_NumericUpDown.Value
+                QuantityAvaliable = (int)quantity_NumericUpDown.Value
             };
             Close();
         }
