@@ -42,18 +42,24 @@ namespace Crm.BL.Model.Tests
                 QuantityAvaliable = 22
             };
 
-            ShoppingCart cart1 = new ShoppingCart(customer1);
-            cart1.Add(product1);
-            cart1.Add(product1);
-            cart1.Add(product2);
+            ShoppingCart cart1 = new ShoppingCart(customer1)
+            {
+                product1,
+                product1,
+                product2
+            };
 
-            ShoppingCart cart2 = new ShoppingCart(customer2);
-            cart2.Add(product1);
-            cart2.Add(product2);
-            cart2.Add(product2);
+            ShoppingCart cart2 = new ShoppingCart(customer2)
+            {
+                product1,
+                product2,
+                product2
+            };
 
-            CashDesk cashdesk = new CashDesk(1, seller);
-            cashdesk.MaxQueueLenght = 10;
+            CashDesk cashdesk = new CashDesk(1, seller)
+            {
+                MaxQueueLenght = 10
+            };
             cashdesk.Enqueue(cart1);
             cashdesk.Enqueue(cart2);
 

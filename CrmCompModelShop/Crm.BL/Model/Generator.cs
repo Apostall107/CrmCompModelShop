@@ -7,9 +7,9 @@ namespace Crm.BL.Model
     {
         private Random rnd = new Random();
 
-        public List<Customer> Customers { get; set; }
-        public List<Product> Products { get; set; }
-        public List<Seller> Sellers { get; set; }
+        public List<Customer> Customers { get; set; } = new List<Customer>();
+        public List<Product> Products { get; set; } = new List<Product>();
+        public List<Seller> Sellers { get; set; } = new List<Seller>();
 
         public List<Customer> GetNewCustomers(int count)
         {
@@ -57,8 +57,8 @@ namespace Crm.BL.Model
                 {
                     Id = Products.Count,
                     Name = GetRandomText(),
-                    QuantityAvaliable = rnd.Next(10, 1000),
-                    Price = Convert.ToDecimal(rnd.Next(5, 100000) + rnd.NextDouble())
+                    QuantityAvaliable = rnd.Next(0, 1000),
+                    Price = Convert.ToDecimal(rnd.Next(1, 100000) + rnd.NextDouble())
                 };
                 Products.Add(product);
                 result.Add(product);
@@ -82,7 +82,7 @@ namespace Crm.BL.Model
 
         private static string GetRandomText()
         {
-            return Guid.NewGuid().ToString().Substring(0, 5);
+            return Guid.NewGuid().ToString().Substring(0, 8);
         }
     }
 }

@@ -9,16 +9,14 @@ namespace Crm.BL.Model
         private CrmContext db = new CrmContext();
 
         public int DeskNo { get; set; }
-
         public Seller Seller { get; set; }
-
         public Queue<ShoppingCart> Queue { get; set; }
-
         public int MaxQueueLenght { get; set; }
-
         public int CustomersLeftCounter { get; set; }
-
         public bool IsModel { get; set; }
+        public int Count => Queue.Count;
+
+        
 
         public CashDesk(int deskNo, Seller seller)
         {
@@ -42,7 +40,7 @@ namespace Crm.BL.Model
 
         public decimal Dequeue()
         {
-            decimal sum = 0m;
+            decimal sum = 0;
             if (Queue.Count == 0)
             {
                 return 0;
