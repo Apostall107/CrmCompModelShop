@@ -16,7 +16,7 @@ namespace Crm.BL.Model
         public bool IsModel { get; set; }
         public int Count => Queue.Count;
 
-        
+        public event EventHandler<Cheque> ChequeClosed;
 
         public CashDesk(int deskNo, Seller seller)
         {
@@ -94,10 +94,16 @@ namespace Crm.BL.Model
                     }
                 }
 
+                cheque.Outcome = sum;
+
+
                 if (IsModel != true)
                 {
                     db.SaveChanges();
                 }
+
+                ChequeClosed?.Invoke(this, cheque);
+
             }
 
             return sum;

@@ -16,6 +16,8 @@ namespace Crm.BL.Model
 
         public DateTime Created { get; set; }
 
+        public decimal Outcome { get; set; }
+
         public virtual ICollection<Selling> Sellings { get; set; }
 
         public override string ToString()

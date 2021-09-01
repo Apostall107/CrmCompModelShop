@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Crm.BL.Model
@@ -13,6 +14,7 @@ namespace Crm.BL.Model
         Generator Generator = new Generator();
         Random rnd = new Random();
 
+        bool isWorking = false;
 
         public List<CashDesk> CashDesks { get; set; } = new List<CashDesk>();
         public List<ShoppingCart> ShoppingCarts { get; set; } = new List<ShoppingCart>();
@@ -26,7 +28,7 @@ namespace Crm.BL.Model
 
         public ShopComputerModel()
         {
-            List<Seller> sellers = Generator.GetNewSellers(20);
+            List<Seller> sellers = Generator.GetNewSellers(5);
             Generator.GetNewProducts(1000);
             Generator.GetNewCustomers(50);
 
@@ -46,61 +48,75 @@ namespace Crm.BL.Model
         public void Start()
         {
 
-            List<Customer> customers = Generator.GetNewCustomers(15);
+            isWorking = true;
+            Task.Run(()=>CreateCarts(15, 800));
 
-            Queue<ShoppingCart> shoppingCarts = new Queue<ShoppingCart>();
+
+            // creating  collection of task for  working cash desks. 
+            IEnumerable<Task> cashDeskTasks = CashDesks.Select(x => new Task(() => CashDeskWork(x, 1000)));
 
 
-            //feels up carts with products.
-            foreach (Customer customer in customers)
+            // Starting all tasks for cash desks.
+            foreach (Task task in cashDeskTasks)
             {
-                ShoppingCart cart = new ShoppingCart(customer);
-
-                foreach (Product product in Generator.GetRandomProducts(1, 30))
-                {
-                    cart.Add(product);
-                }
-                shoppingCarts.Enqueue(cart);
-
+                task.Start();
             }
 
-
-
-            // customers/carts take a place in desks.
-            while (shoppingCarts.Count > 0)
-            {
-                //Choose desk with shortest queue.
-                CashDesk cashDesk = CashDesks.OrderBy(x => x.Count).FirstOrDefault();
-                cashDesk.Enqueue(shoppingCarts.Dequeue());
-
-            }
-
-
-            // desks work all the time.
+            // desks work all the time
             while (true)
             {
                 CashDesk cashDesk = CashDesks.OrderBy(c => c.Count).FirstOrDefault();
-                var money = cashDesk.Dequeue();
+                decimal money = cashDesk.Dequeue();
             }
 
 
 
         }
 
-        //public void Stop()
-        //{
+        public void Stop()
+        {
+            isWorking = false;
+        }
 
-        //}
+        private void CashDeskWork(CashDesk cashDesk, int sleep)
+        {
+            while (isWorking)
+            {
 
-        //private void CashDeskWork(CashDesk cashDesk)
-        //{
+                if (cashDesk.Count > 0 )
+                {
+                    cashDesk.Dequeue();
+                    Thread.Sleep(sleep);
+                }
 
-        //}
+            }
+        }
 
-        //private void CreateCarts(int customerCounts)
-        //{
+        private void CreateCarts(int customersQuantity, int sleep)
+        {
+            while (isWorking)
+            {
+                List<Customer> customers = Generator.GetNewCustomers(customersQuantity);
 
 
-        //}
+                foreach (Customer customer in customers)
+                {
+                 
+                    ShoppingCart cart = new ShoppingCart(customer);
+                    // feels up carts with products.
+                    foreach (Product product in Generator.GetRandomProducts(10,30))
+                    {
+                        cart.Add(product);
+                    }
+
+                    //Choose desk with shortest queue.
+                    CashDesk cashDesk = CashDesks.OrderBy(x => x.Count).FirstOrDefault();
+                    cashDesk.Enqueue(cart);
+                }
+
+                Thread.Sleep(sleep);
+
+            }
+        }
     }
 }

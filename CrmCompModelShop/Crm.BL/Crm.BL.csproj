@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AbstractPerson.cs" />
-    <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\CashDesk.cs" />
     <Compile Include="Model\Cheque.cs" />
     <Compile Include="Model\CrmContext.cs" />
