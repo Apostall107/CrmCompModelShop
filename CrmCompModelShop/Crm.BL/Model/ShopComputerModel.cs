@@ -28,16 +28,16 @@ namespace Crm.BL.Model
 
         public ShopComputerModel()
         {
-            List<Seller> sellers = Generator.GetNewSellers(5);
+            List<Seller> sellers = Generator.GetNewSellers(8);
             Generator.GetNewProducts(1000);
-            Generator.GetNewCustomers(50);
+            Generator.GetNewCustomers(60);
 
             foreach (Seller seller in sellers)
             {
                 Sellers.Enqueue(seller);
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 CashDesks.Add(new CashDesk(CashDesks.Count, Sellers.Dequeue()));
             }
@@ -53,7 +53,7 @@ namespace Crm.BL.Model
 
 
             // creating  collection of task for  working cash desks. 
-            IEnumerable<Task> cashDeskTasks = CashDesks.Select(x => new Task(() => CashDeskWork(x, 1000)));
+            IEnumerable<Task> cashDeskTasks = CashDesks.Select(x => new Task(() => CashDeskWork(x, rnd.Next(200,1000) )));
 
 
             // Starting all tasks for cash desks.
@@ -62,20 +62,12 @@ namespace Crm.BL.Model
                 task.Start();
             }
 
-            // desks work all the time
-            while (true)
-            {
-                CashDesk cashDesk = CashDesks.OrderBy(c => c.Count).FirstOrDefault();
-                decimal money = cashDesk.Dequeue();
-            }
-
-
-
         }
 
         public void Stop()
         {
             isWorking = false;
+            Thread.Sleep(1000);
         }
 
         private void CashDeskWork(CashDesk cashDesk, int sleep)
@@ -110,7 +102,10 @@ namespace Crm.BL.Model
                     }
 
                     //Choose desk with shortest queue.
+                    //CashDesk cashDesk = CashDesks[rnd.Next(CashDesks.Count)];
+
                     CashDesk cashDesk = CashDesks.OrderBy(x => x.Count).FirstOrDefault();
+
                     cashDesk.Enqueue(cart);
                 }
 
