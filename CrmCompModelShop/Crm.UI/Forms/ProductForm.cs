@@ -27,7 +27,7 @@ namespace Crm.UI.Forms
             {
                 Name = name_TextBox.Text,
                 Price = price_NumericUpDown.Value,
-                QuantityAvaliable = (int)quantity_NumericUpDown.Value
+                QuantityAvaliable = Convert.ToInt32(quantity_NumericUpDown.Value)
             };
             Close();
         }

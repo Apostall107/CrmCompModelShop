@@ -58,7 +58,7 @@ namespace Crm.BL.Model
                     Id = Products.Count,
                     Name = GetRandomText(),
                     QuantityAvaliable = rnd.Next(0, 1000),
-                    Price = Convert.ToDecimal(rnd.Next(1, 100000) + rnd.NextDouble())
+                    Price = Convert.ToDecimal(rnd.Next(1, 1000) + rnd.NextDouble())
                 };
                 Products.Add(product);
                 result.Add(product);

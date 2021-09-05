@@ -101,5 +101,11 @@ namespace Crm.UI.Forms
         }
 
         #endregion EntitiesMenu
+
+        private void modelingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModelForm modelForm = new ModelForm();
+            modelForm.Show();
+        }
     }
 }

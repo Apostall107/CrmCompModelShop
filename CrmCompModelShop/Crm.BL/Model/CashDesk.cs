@@ -24,6 +24,7 @@ namespace Crm.BL.Model
             Seller = seller;
             Queue = new Queue<ShoppingCart>();
             IsModel = true;
+            MaxQueueLenght = 10;
         }
 
         public void Enqueue(ShoppingCart cart)
